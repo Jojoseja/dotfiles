@@ -1,0 +1,62 @@
+#
+# ~/.zshrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# Aliases
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+
+# Starship prompt
+eval "$(starship init zsh)"
+
+# PATH additions
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/scripts:$PATH"
+export JAVA_HOME=/usr/lib/jvm/jdk-25
+export PATH=$JAVA_HOME/bin:$PATH
+# Default editor
+export EDITOR="nvim"
+
+# Zoxide
+eval "$(zoxide init zsh)"
+
+# ----------------------------
+# Zsh plugins
+# ----------------------------
+
+# Syntax highlighting
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Autosuggestions
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Optional: enable autosuggestions as you type
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'  # subtle gray suggestions
+
+# Optional: nice colored prompt if you want a fallback
+autoload -U colors && colors
+
+#Start the sdk automatically
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+
+# opencode
+export PATH=/home/jojo/.opencode/bin:$PATH
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# pnpm
+export PNPM_HOME="/home/jojo/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
+# pnpm end
