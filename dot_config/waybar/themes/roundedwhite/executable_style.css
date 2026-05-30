@@ -108,13 +108,7 @@ button:hover {
 #filler:hover > *{
     opacity: 1;
 }
-#custom-fillerg {
-  padding: 0 8px;
-}
 
-.fillerg-child {
-  margin-left: 6px;
-}
 #window,
 #workspaces {
     margin: 0 4px;

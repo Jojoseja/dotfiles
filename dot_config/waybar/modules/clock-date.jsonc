@@ -1,0 +1,8 @@
+{
+    "clock#date": {
+        "format": " {:%Y %m %d}",
+        "timezone": "Europe/Madrid",
+        "on-click": "korganizer",
+        "tooltip": false
+    }
+}

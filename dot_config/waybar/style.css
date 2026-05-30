@@ -1,0 +1,74 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: JetBrains Mono, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+#workspaces,
+#mpris,
+#cava,
+#window,
+#cpu,
+#memory,
+#disk,
+#pulseaudio,
+#clock,
+#tray,
+#custom-notifications {
+    background-color: #150c3d;
+    margin: 4px;
+    padding: 4px;
+    color: #ffffff;
+    border-radius: 1em;
+}
+
+#mpris {
+    color: #F9FBE7;
+}
+
+#cava {
+    color: #69F0AE;
+}
+
+#window {
+    color: #26C6DA;
+}
+
+#cpu {
+    color: #AB47BC;
+}
+
+#memory {
+    color: #7E57C2;
+}
+
+#disk {
+    color: #536DFE;
+}
+
+#pulseaudio {
+    color: #BBDEFB;
+}
+
+#clock.date {
+    color: #FF8A80;
+}
+
+#clock.time {
+    color: #0097A7;
+}
+
+#tray {
+    color: #E0F7FA;
+}
+
+#custom-notifications {
+    color: #B2DFDB;
+}

@@ -14,14 +14,43 @@ eval "$(starship init zsh)"
 
 # PATH additions
 export PATH="$HOME/.local/bin:$PATH"
-export PATH="$HOME/scripts:$PATH"
 export JAVA_HOME=/usr/lib/jvm/jdk-25
 export PATH=$JAVA_HOME/bin:$PATH
+
 # Default editor
 export EDITOR="nvim"
 
 # Zoxide
 eval "$(zoxide init zsh)"
+
+#Start the sdk automatically
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# nvm 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# npm global binaries
+export PATH="$(npm config get prefix)/bin:$PATH"
+
+# fix with nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+
+# opencode
+export PATH=/home/jojo/.opencode/bin:$PATH
+
+# pnpm
+export PNPM_HOME="/home/jojo/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
 
 # ----------------------------
 # Zsh plugins
@@ -39,24 +68,4 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'  # subtle gray suggestions
 # Optional: nice colored prompt if you want a fallback
 autoload -U colors && colors
 
-#Start the sdk automatically
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-
-# Load Angular CLI autocompletion.
-source <(ng completion script)
-
-# opencode
-export PATH=/home/jojo/.opencode/bin:$PATH
-
-export NVM_DIR="$HOME/.config/nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# pnpm
-export PNPM_HOME="/home/jojo/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME/bin:"*) ;;
-  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
-esac
-# pnpm end

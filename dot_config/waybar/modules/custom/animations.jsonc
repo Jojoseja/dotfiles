@@ -1,0 +1,10 @@
+{
+    "custom/animations": {  
+        //"exec": "~/.config/waybar/scripts/current_status.sh",
+        "return-type": "json",
+        "format": "{}",
+        "interval": 30,
+        "tooltip": true
+        //"on-click": "~/.config/hypr/scripts/animations.sh"       
+    }
+}

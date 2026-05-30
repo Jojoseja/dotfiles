@@ -1,5 +1,8 @@
 #!/bin/bash
 
+WAYBAR_DIR="$HOME/.config/waybar"
+THEMES_DIR="$WAYBAR_DIR/themes"
+
 if [ -z "$1" ]; then
     echo "Usage: waybar-theme <theme-name>"
     echo "Available themes:"
@@ -18,8 +21,16 @@ if [ ! -d "$THEME_PATH" ]; then
 fi
 
 # Kill current waybar
-killall waybar 2>/dev/null
+pkill -x waybar 2>/dev/null || true
+
+while pgrep -x waybar >/dev/null; do
+    sleep 0.1
+done
 
 # Start waybar with selected theme
-waybar -c "$THEME_PATH/config.jsonc" -s "$THEME_PATH/style.css" &
+
+nohup waybar -c "$THEME_PATH/config.jsonc" -s "$THEME_PATH/style.css" \
+    > "$WAYBAR_DIR/waybar.log" 2>&1 &
+
+
 echo "Waybar theme changed to: $THEME"

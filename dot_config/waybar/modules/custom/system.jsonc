@@ -1,0 +1,37 @@
+{
+    "custom/system": {
+        "format": "",
+        "tooltip": false
+    },
+    // CPU
+    "cpu": {
+        "format": "{icon} {usage}% ",
+        "format-icons": [""]
+    },
+    // Memory
+    "memory": {
+        "format": "{icon} {percentage}%",
+        "format-icons": [""]
+    },
+    // Harddisk space used
+    "disk": {
+        "interval": 30,
+        "format": " {percentage_used}% ",
+        "path": "/"
+    },
+    // Group Hardware
+    "group/hardware": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 300,
+            "children-class": "not-memory",
+            "transition-left-to-right": false
+        },
+        "modules": [
+            "custom/system",
+            "disk",
+            "cpu",
+            "memory"
+        ]
+    }
+}

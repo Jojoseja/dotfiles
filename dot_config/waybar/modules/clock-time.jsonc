@@ -1,0 +1,8 @@
+{
+    "clock#time": {
+        "format": " {:%H:%M}",
+        "timezone": "Europe/Madrid",
+        "on-click": "gnome-calendar",
+        "tooltip": false
+    }
+}

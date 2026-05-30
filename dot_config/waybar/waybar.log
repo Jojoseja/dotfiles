@@ -1,0 +1,28 @@
+[2026-05-30 01:02:55.053] [info] Using configuration file /home/jojo/.config/waybar/themes/pasteldesktop/config.jsonc
+[2026-05-30 01:02:55.054] [info] Including resource file: ~/.config/waybar/modules/hyprland.jsonc
+[2026-05-30 01:02:55.054] [info] Including resource file: ~/.config/waybar/modules/cava.jsonc
+[2026-05-30 01:02:55.054] [info] Including resource file: ~/.config/waybar/modules/mpris.jsonc
+[2026-05-30 01:02:55.054] [info] Including resource file: ~/.config/waybar/modules/clock-date.jsonc
+[2026-05-30 01:02:55.054] [info] Including resource file: ~/.config/waybar/modules/clock-time.jsonc
+[2026-05-30 01:02:55.054] [info] Including resource file: ~/.config/waybar/modules/privacy.jsonc
+[2026-05-30 01:02:55.054] [info] Including resource file: ~/.config/waybar/modules/network.jsonc
+[2026-05-30 01:02:55.054] [info] Including resource file: ~/.config/waybar/modules/bluetooth.jsonc
+[2026-05-30 01:02:55.054] [info] Including resource file: ~/.config/waybar/modules/pulseaudio.jsonc
+[2026-05-30 01:02:55.054] [info] Including resource file: ~/.config/waybar/modules/tray.jsonc
+[2026-05-30 01:02:55.054] [info] Including resource file: ~/.config/waybar/modules/custom/notifications.jsonc
+[2026-05-30 01:02:55.054] [info] Including resource file: ~/.config/waybar/modules/custom/filler.jsonc
+[2026-05-30 01:02:55.054] [info] Including resource file: ~/.config/waybar/modules/custom/system.jsonc
+[2026-05-30 01:02:55.056] [info] Discovered appearance 'dark'
+[2026-05-30 01:02:55.056] [info] Using CSS file /home/jojo/.config/waybar/themes/pasteldesktop/style.css
+[2026-05-30 01:02:55.059] [info] Hyprland IPC starting
+[2026-05-30 01:02:55.060] [info] Loading persistent workspaces from Hyprland workspace rules
+[2026-05-30 01:02:55.060] [info] Registering for Hyprland's 'activewindowv2' events because 'update-active-window' is set to true.
+[2026-05-30 01:02:55.404] [info] Loading persistent workspaces from Hyprland workspace rules
+[2026-05-30 01:02:55.404] [info] Registering for Hyprland's 'activewindowv2' events because 'update-active-window' is set to true.
+[2026-05-30 01:02:55.413] [info] Loading persistent workspaces from Hyprland workspace rules
+[2026-05-30 01:02:55.413] [info] Registering for Hyprland's 'activewindowv2' events because 'update-active-window' is set to true.
+
+** (waybar:182197): WARNING **: 01:02:55.684: Status Notifier Item with bus name ':1.5' and object path '/org/ayatana/NotificationItem/nm_applet' is already registered
+[2026-05-30 01:02:55.809] [info] Bar configured (width: 1920, height: 48) for output: DP-1
+[2026-05-30 01:02:55.809] [info] Bar configured (width: 1080, height: 48) for output: HDMI-A-1
+[2026-05-30 01:02:55.809] [info] Bar configured (width: 1920, height: 48) for output: HDMI-A-2
